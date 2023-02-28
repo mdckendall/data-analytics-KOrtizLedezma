@@ -1,13 +1,17 @@
+import java.util.Scanner;
+
 class Main {
 	public static void main(String[] args){
 
+    Scanner input = new Scanner(System.in);
     Menu menu = new Menu();
-    Input input = new Input();
     int option = 0;
     boolean state = false;
+    
     while(!state){
       menu.mainMenu();//Displays the main Menu
-      option = input.intValidation(option);//Verify the number we are getting is a number
+      option = input.nextInt();
+      input.nextLine();
       menu.actions(option);
     } 
 	}
