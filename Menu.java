@@ -37,4 +37,26 @@ class Menu{
   public void caseDefault(){
     System.out.println("That option is not valide, try again");
   }
+  public void options(int option){
+    switch(option){
+      case 1:
+        caseOne();
+        break;
+      case 2:
+        caseTwo();
+        break;
+      case 3:
+        caseThree();
+        break;
+      case 4:
+        caseFour();
+        break;
+      case 5:
+        System.exit(0);
+        break;
+      default:
+        caseDefault();
+        break;
+    }
+  }
 }
