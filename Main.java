@@ -1,14 +1,18 @@
-import java.io.FileReader;
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 
 class Main {
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args){
 
-		ArrayList<String> arrayList = new ArrayList<>();
-		FileReader fr = new FileReader("names.txt");
-		Scanner fileScanner = new Scanner(fr);
-		
+    Scanner input = new Scanner(System.in);
+    Menu menu = new Menu();
+    int option = 0;
+    boolean state = false;
+    
+    while(!state){
+      menu.mainMenu();//Displays the main Menu
+      option = input.nextInt();
+      input.nextLine();
+      menu.options(option);
+    } 
 	}
 }
