@@ -12,7 +12,26 @@ class Main {
       menu.mainMenu();//Displays the main Menu
       option = input.nextInt();
       input.nextLine();
-      menu.actions(option);
+      switch(option){
+      case 1:
+        menu.caseOne();
+        break;
+      case 2:
+        menu.caseTwo();
+        break;
+      case 3:
+        menu.caseThree();
+        break;
+      case 4:
+        menu.caseFour();
+        break;
+      case 5:
+        state = true;
+        break;
+      default:
+        menu.caseDefault();
+        break;
+    }
     } 
 	}
 }
